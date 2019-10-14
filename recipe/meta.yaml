@@ -28,6 +28,7 @@ requirements:
     - empy
   run:
     - ros-conda-base
+    - python
     - cmake
     - gtest
     - nose
