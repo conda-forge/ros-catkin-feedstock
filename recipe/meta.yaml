@@ -10,7 +10,7 @@ source:
       - 002_no_hardcoded_python.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
