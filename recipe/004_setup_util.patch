@@ -1,7 +1,7 @@
-diff --git a/cmake/templates/_setup_util.py.in b/cmake/templates/_setup_util.py.in
+diff --git a/_setup_util.py b/_setup_util.py
 index b08a57a2..4dd27ac3 100755
---- a/cmake/templates/_setup_util.py.in
-+++ b/cmake/templates/_setup_util.py.in
+--- a/_setup_util.py
++++ b/_setup_util.py
 @@ -58,6 +58,8 @@ ENV_VAR_SUBFOLDERS = {
      'PYTHONPATH': '@PYTHON_INSTALL_DIR@',
  }
