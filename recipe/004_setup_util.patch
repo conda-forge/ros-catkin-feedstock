@@ -1,8 +1,17 @@
 diff --git a/_setup_util.py b/_setup_util.py
-index 3c23425..df04ed0 100755
+index b08a57a2..4dd27ac3 100755
 --- a/_setup_util.py
 +++ b/_setup_util.py
-@@ -269,14 +269,14 @@ if __name__ == '__main__':
+@@ -58,6 +58,8 @@ ENV_VAR_SUBFOLDERS = {
+     'PYTHONPATH': '@PYTHON_INSTALL_DIR@',
+ }
+ 
++if IS_DARWIN:
++    del ENV_VAR_SUBFOLDERS['DYLD_LIBRARY_PATH']
+ 
+ def rollback_env_variables(environ, env_var_subfolders):
+     '''
+@@ -269,14 +271,14 @@ if __name__ == '__main__':
              # don't consider any other prefix path than this one
              CMAKE_PREFIX_PATH = []
          # prepend current workspace if not already part of CPP
@@ -13,12 +22,12 @@ index 3c23425..df04ed0 100755
 -        if os.path.sep != '/':
 -            base_path = base_path.replace(os.path.sep, '/')
 +        # if os.path.sep != '/':
-+        #     base_path = base_path.replace(os.path.sep, '/')
++        #    base_path = base_path.replace(os.path.sep, '/')
  
 -        if base_path not in CMAKE_PREFIX_PATH:
 -            CMAKE_PREFIX_PATH.insert(0, base_path)
 +        # if base_path not in CMAKE_PREFIX_PATH:
-+        #    CMAKE_PREFIX_PATH.insert(0, base_path)
++        #     CMAKE_PREFIX_PATH.insert(0, base_path)
          CMAKE_PREFIX_PATH = os.pathsep.join(CMAKE_PREFIX_PATH)
  
          environ = dict(os.environ)
