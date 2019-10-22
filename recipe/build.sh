@@ -43,3 +43,4 @@ mv $PREFIX/_setup_util.py $PREFIX/etc/conda/activate.d/ros_setup_util.py
 rm $PREFIX/setup.*
 rm $PREFIX/local_setup.*
 rm $PREFIX/env.sh
+rm -f $PREFIX/_setup_util.py.orig

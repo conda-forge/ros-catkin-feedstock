@@ -10,7 +10,7 @@ source:
       - 002_no_hardcoded_python.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
 
 requirements:
@@ -58,3 +58,4 @@ extra:
     - wolfv
     - lesteve
     - SylvainCorlay
+    - seanyen
