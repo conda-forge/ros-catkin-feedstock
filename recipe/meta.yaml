@@ -1,5 +1,7 @@
 {% set version = "0.7.19-1" %}
 {% set sha256 = "10d50731008b2ab232a17cd1717d0b81d75d175b6f4b99a2e28ed4acc59df055" %}
+{% set version = "0.7.19-1" %}
+{% set sha256 = "10d50731008b2ab232a17cd1717d0b81d75d175b6f4b99a2e28ed4acc59df055" %}
 
 package:
   name: ros-catkin
@@ -13,8 +15,7 @@ source:
       - 002_no_hardcoded_python.patch
 
 build:
-  number: 3
-  skip: true  # [win]
+  number: 0  skip: true  # [win]
 
 requirements:
   build:
