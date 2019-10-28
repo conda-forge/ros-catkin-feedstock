@@ -1,9 +1,12 @@
+{% set version = "0.7.19-1" %}
+{% set sha256 = "10d50731008b2ab232a17cd1717d0b81d75d175b6f4b99a2e28ed4acc59df055" %}
+
 package:
   name: ros-catkin
-  version: 0.7.17
+  version: {{ version.split("-")[0] }}
 
 source:
-  - url: https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.17-0.tar.gz
+  url: https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/{{ version }}.tar.gz
     sha256: 316178707bc3f0edcb86a77ec2ec174b98b4d2ccf41306162cefe6588b3a9d41
     patches:
       - 001_remove_rt.patch
