@@ -1,7 +1,5 @@
 {% set version = "0.7.19-1" %}
 {% set sha256 = "10d50731008b2ab232a17cd1717d0b81d75d175b6f4b99a2e28ed4acc59df055" %}
-{% set version = "0.7.19-1" %}
-{% set sha256 = "10d50731008b2ab232a17cd1717d0b81d75d175b6f4b99a2e28ed4acc59df055" %}
 
 package:
   name: ros-catkin
@@ -9,13 +7,14 @@ package:
 
 source:
   url: https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/{{ version }}.tar.gz
-    sha256: 316178707bc3f0edcb86a77ec2ec174b98b4d2ccf41306162cefe6588b3a9d41
-    patches:
-      - 001_remove_rt.patch
-      - 002_no_hardcoded_python.patch
+  sha256: 316178707bc3f0edcb86a77ec2ec174b98b4d2ccf41306162cefe6588b3a9d41
+  patches:
+    - 001_remove_rt.patch
+    - 002_no_hardcoded_python.patch
 
 build:
-  number: 0  skip: true  # [win]
+  number: 0
+  skip: true  # [win]
 
 requirements:
   build:
