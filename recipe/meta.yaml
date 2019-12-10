@@ -1,6 +1,6 @@
 package:
   name: ros-catkin
-  version: 0.7.17
+  version: "0.7.20"
 
 source:
   - url: https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.17-0.tar.gz
@@ -10,7 +10,7 @@ source:
       - 002_no_hardcoded_python.patch
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
 
 requirements:
